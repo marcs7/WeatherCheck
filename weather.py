@@ -11,7 +11,7 @@ root.title('Weather check')
 API_KEY = 'insert your key'
 
 def weatherReq():
-    r = requests.get('http://api.openweathermap.org/data/2.5/weather?q='+city.get()+'&lang=it&units=metric&appid='+API_KEY)
+    r = requests.get('http://api.openweathermap.org/data/2.5/weather?q='+city.get()+'&units=metric&appid='+API_KEY)
 
     temp = str(r.json()['weather'][0]['description'])
     temperature = str(r.json()['main']['temp'])
